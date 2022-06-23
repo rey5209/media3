@@ -102,7 +102,7 @@ $(document).ready(function() {
 
         let str_popups = '';
         var page = item.page;
-        
+         
         
         if(item.allow_popup_option){
           item.popup_option.forEach(setPopupOptions);

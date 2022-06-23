@@ -11,8 +11,8 @@
     "different_link_per_data" : false,
     "different_img_per_data" : true,
     "redirectPage": true,
-    "page" : "watch", 
-    "allow_popup_option":true,
+    "page" : "watch2", 
+    "allow_popup_option":false,
     "popup_option":[
       { 
         "subTittle" : "Youtube",
