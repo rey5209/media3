@@ -1,5 +1,9 @@
 
 
+
+var popup_href_original=[]
+
+
 $(document).ready(function() {
 
   // urlParams Para mma get ung mga nasa params
@@ -64,10 +68,7 @@ $(document).ready(function() {
 
       data.jsonData.forEach(setTables);
       // data.yesterday.forEach(setViewsYesteday); 
-
-      function setPages(item, index) { 
-
-      }
+ 
 
       function setTables(item, index) { 
 
@@ -89,7 +90,7 @@ $(document).ready(function() {
         '<table name="'+item.tittle+'" class="table table-striped table-hover table-paging table-page-'+count_page+'">'+
         '    <thead>'+
         '      <tr > '+
-        '        <th  class="lokals-item d-flex justify-content-between align-items-center"> '+
+        '        <th  class="lokals-item d-flex justify-content-between align-items-center bg-dark"> '+
         '          <div class="p-2 bd-highlight link-dark post-title " style="color:'+item.first_header_color+'">'+item.first_header_title+'</div> '+ 
         '        </th> '+
         '      </tr>'+
@@ -101,7 +102,8 @@ $(document).ready(function() {
 
 
         let str_popups = '';
-        var page = item.page;
+        // var page = item.page;
+        var arr_hrefs = [];
          
         
         if(item.allow_popup_option){
@@ -110,17 +112,21 @@ $(document).ready(function() {
           $('.append-popup-options').html(str_popups);
         }
 
-        function setPopupOptions(item, index) {
- 
+        function setPopupOptions(item, index) { 
+
+          arr_hrefs.push(item.page+'?mediaId='+(index+1))
 
           str_popups += '' +
-         ' <a href="'+page+'?pageId='+(index+1)+'" class="me-4 text-reset text-danger  popup-choice">  '+
+         ' <a href="'+item.page+'?mediaId='+(index+1)+'" class="me-4 text-reset text-danger  popup-choice'+current_page+'">  '+
          '   <i class="fab fa-'+item.subTittleIcon+' bg-white rounded-circle" style=" font-size: 15rem; color:'+item.subTittleColor+' "></i> '+
          '   <p class="h1 text-center bg-white">'+item.subTittle+'</p>'+
          ' </a>'+
          ' <br></br>';
 
         }
+        
+        popup_href_original.push({ arr: arr_hrefs } )
+        
 
 
 
@@ -137,9 +143,9 @@ $(document).ready(function() {
             // Setup Lokal content and views for each page
           if(item.divider){
               $('.append_table-'+count_page).append(""+
-                '<tr> '+
+                '<tr style=" background-color:'+item.bg+'; "> '+
             '        <th  class="lokals-item d-flex justify-content-between align-items-center border-bottom border-dark"> '+
-            '          <div class="p-2 bd-highlight link-dark post-title " style="color:'+item.color+'">'+item.divider_title+'</div> '+ 
+            '          <div class="p-2 bd-highlight link-dark post-title " style="color:'+item.color+';">'+item.divider_title+'</div> '+ 
             '        </th> '+
             '  </tr>  '+
             "")
@@ -148,7 +154,7 @@ $(document).ready(function() {
 
             let popup_trigger = '';
             if(allow_popup_option){
-              popup_trigger = ' data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-lokal="'+item.lokal+'" ';
+              popup_trigger = ' data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-lokal="&pageId='+count_page+'&lokal='+item.lokal+'" data-bs-page="'+current_page+'"';
   
               // pageId=2&lokal=Benguet
             }
@@ -256,6 +262,7 @@ $(document).ready(function() {
     
 }) 
 
+
 var exampleModal = document.getElementById('exampleModal')
 exampleModal.addEventListener('show.bs.modal', function (event) {
 
@@ -263,22 +270,19 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   var button = event.relatedTarget
   // Extract info from data-bs-* attributes
   var lokal = button.getAttribute('data-bs-lokal')
+  var pageId = button.getAttribute('data-bs-page')
   // If necessary, you could initiate an AJAX request here
   // and then do the updating in a callback.
   //
 
+ 
   
-  $( ".popup-choice" ).each(function( index ) {
-                
-    let popup_href =    $( this ).attr('href')  ;
-    $( this ).attr('href',popup_href+'&lokal='+lokal)  ;
+  $( ".popup-choice"+pageId ).each(function( index ) {
+    
+    // console.log(popup_href_original[pageId-1].arr[index] )
+    // let popup_href =    $( this ).attr('href')  ;
+    $( this ).attr('href',popup_href_original[pageId-1].arr[index]  +lokal)  ;
     
   });
   
-  // Update the modal's content.
-  // var modalTitle = exampleModal.querySelector('.modal-title')
-  // var modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-  // modalTitle.textContent = 'New message to ' + recipient
-  // modalBodyInput.value = recipient
 })
