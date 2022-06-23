@@ -11,7 +11,26 @@
     "different_link_per_data" : false,
     "different_img_per_data" : true,
     "redirectPage": true,
-    "page" : "watch2",
+    "page" : "watch", 
+    "allow_popup_option":true,
+    "popup_option":[
+      { 
+        "subTittle" : "Youtube",
+        "subTittleIcon" : "youtube",
+        "subTittleColor" : "red",
+        "subTittleType" : "icon",
+        "link" : "https://www.youtube.com/watch?v=oNJeWvAy2ow"
+      },
+      { 
+        "subTittle" : "Facebook",
+        "subTittleIcon" : "facebook",
+        "subTittleColor" : "#1c4ee3",
+        "subTittleType" : "icon",
+        "link" : "https://www.facebook.com/events/445572446942321/"
+      }
+
+    ],
+
     "redirect_text":"Sending view from facebook",
     "first_header_color":"#000",
     "first_header_title":"Featured Districts",
@@ -40,6 +59,7 @@
       "different_img_per_data" : true,
       "redirectPage": true,
       "page" : "watch",
+      "allow_popup_option":false,
       "redirect_text":"Sending view from youtube",
         "first_header_color":"#000",
         "first_header_title":"Featured Districts",

@@ -98,10 +98,37 @@ $(document).ready(function() {
         '  </tbody>'+
         '</table>'+
         "")
+
+
+        let str_popups = '';
+        var page = item.page;
+        
+        
+        if(item.allow_popup_option){
+          item.popup_option.forEach(setPopupOptions);
+
+          $('.append-popup-options').html(str_popups);
+        }
+
+        function setPopupOptions(item, index) {
+ 
+
+          str_popups += '' +
+         ' <a href="'+page+'?pageId='+(index+1)+'" class="me-4 text-reset text-danger  popup-choice">  '+
+         '   <i class="fab fa-'+item.subTittleIcon+' bg-white rounded-circle" style=" font-size: 15rem; color:'+item.subTittleColor+' "></i> '+
+         '   <p class="h1 text-center bg-white">'+item.subTittle+'</p>'+
+         ' </a>'+
+         ' <br></br>';
+
+        }
+
+
+
+         
         
  
-        var page = item.page;
         var redirectPage = item.redirectPage;
+        var allow_popup_option = item.allow_popup_option;
         item.viewData.forEach(setLokals);
         function setLokals(item, index) { 
           // total += item.views; 
@@ -117,11 +144,19 @@ $(document).ready(function() {
             '  </tr>  '+
             "")
           }else{
+ 
+
+            let popup_trigger = '';
+            if(allow_popup_option){
+              popup_trigger = ' data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-lokal="'+item.lokal+'" ';
+  
+              // pageId=2&lokal=Benguet
+            }
 
             $('.append_table-'+count_page).append(""+
             '<tr> '+
             '    <td > '+
-            '        <a href="'+(redirectPage == true? page+'?pageId='+count_page+'&lokal='+item.lokal : '#' )+'" class="lokals-item d-flex justify-content-between align-items-center" id="lokal_'+item.lokal+'">'+
+            '        <a href="'+(redirectPage == true && allow_popup_option == false ? page+'?pageId='+count_page+'&lokal='+item.lokal : '#' )+'" class="lokals-item d-flex justify-content-between align-items-center" '+popup_trigger+' id="lokal_'+item.lokal+'">'+
             '          <div class="p-2 link-dark post-title">'+item.lokal+'</div> '+ 
             '        </a>'+
             '    </td>  '+
@@ -220,3 +255,30 @@ $(document).ready(function() {
     }
     
 }) 
+
+var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+
+  // Button that triggered the modal
+  var button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  var lokal = button.getAttribute('data-bs-lokal')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+
+  
+  $( ".popup-choice" ).each(function( index ) {
+                
+    let popup_href =    $( this ).attr('href')  ;
+    $( this ).attr('href',popup_href+'&lokal='+lokal)  ;
+    
+  });
+  
+  // Update the modal's content.
+  // var modalTitle = exampleModal.querySelector('.modal-title')
+  // var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+  // modalTitle.textContent = 'New message to ' + recipient
+  // modalBodyInput.value = recipient
+})
