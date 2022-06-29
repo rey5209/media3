@@ -21,7 +21,7 @@
         "subTittleColor" : "red",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from youtube",
-        "link" : "https://www.youtube.com/watch?v=oNJeWvAy2ow"
+        "link" : "https://youtu.be/ThtJJJOA5cs"
       },
       { 
         "page" : "watch", 
@@ -30,7 +30,7 @@
         "subTittleColor" : "#1c4ee3",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from facebook",
-        "link" : "https://www.facebook.com/events/445572446942321/"
+        "link" : "https://facebook.com/events/s/cfo-today-values-june-29-2022-/1024730761566139/"
       }
 
     ],
@@ -40,14 +40,14 @@
     "first_header_title":"Featured Districts",
     "viewData" : [
        
-      {"lokal":"Maynila",             "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0},
-      {"lokal":"Benguet",                           "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0},
-      {"lokal":"Northern Samar",      "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0},
+      {"lokal":"Caloocan North",             "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0},
+      {"lokal":"Misamis Occidental",                           "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0},
+      {"lokal":"Batac City, Ilocos Norte",      "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0},
   
       
       {"lokal":" ",         "divider":true , "divider_title":"CFO Vision", "color":"#42d4f5" , "bg":"#232129"},
         
-      {"lokal":"Metro Manila East",             "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0}
+      {"lokal":"Palawan North",             "duration":"25:0",  "link":"", "image":"33.jpg",        "views":  0}
       
       ] 
     } 
