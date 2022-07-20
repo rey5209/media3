@@ -2,7 +2,7 @@
   "jsonData" : [
     {
     "banner" : "cfo.gif",
-    "tittle" : "TODAY | Season 2 | July 13, 2022 ",
+    "tittle" : "TODAY | Season 2 | July 20, 2022 ",
     "subTittle" : "",
     "subTittleColor" : "red",
     "subTittleType" : "text",
@@ -21,7 +21,7 @@
         "subTittleColor" : "red",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from youtube",
-        "link" : "https://www.youtube.com/watch?v=hAs33CCgd9Y"
+        "link" : "https://www.youtube.com/watch?v=AM1UyWjNnrw"
       },
       { 
         "page" : "watch", 
@@ -30,7 +30,7 @@
         "subTittleColor" : "#1c4ee3",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from facebook",
-        "link" : "https://fb.me/e/27DiXfgIo"
+        "link" : "https://www.facebook.com/events/616721523397501/"
       }
 
     ],
@@ -40,14 +40,14 @@
     "first_header_title":"Featured Districts",
     "viewData" : [
        
-      {"lokal":"Agusan Del Sur",             "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
-      {"lokal":"Bataan",                           "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
-      {"lokal":"Tarlac City, Tarlac",      "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Maguindanao",             "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Sultan Kudarat",                           "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Sta. Cruz, Laguna",      "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
   
       
       {"lokal":" ",         "divider":true , "divider_title":"CFO Vision", "color":"#42d4f5" , "bg":"#232129"},
         
-      {"lokal":"Romblon",             "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}
+      {"lokal":"San Pablo City, Laguna",             "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}
       
       ] 
     } 
