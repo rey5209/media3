@@ -2,7 +2,7 @@
   "jsonData" : [
     {
     "banner" : "cfotest.gif",
-    "tittle" : "TODAY | Values | December 21, 2022 ",
+    "tittle" : "TODAY | Values | January 4, 2023 ",
     "subTittle" : "",
     "subTittleColor" : "red",
     "subTittleType" : "text",
@@ -25,7 +25,7 @@
         "subTittleType" : "icon",
         "redirect_text":"Sending view from youtube",
         "embed_link" : true,
-        "link" : "UNXJAdfWnto",
+        "link" : "DewFjeO6JFY",
         "gtag":"https://www.googletagmanager.com/gtag/js?id=G-F5L1BDXPZJ",
         "gtag_id" :"G-F5L1BDXPZJ"  
       },
@@ -37,7 +37,7 @@
         "subTittleType" : "icon",
         "redirect_text":"Sending view from facebook",
         "embed_link" : false,
-        "link" : "https://fb.me/e/2yJxsKMa8",
+        "link" : "https://www.facebook.com/events/890450778654211/",
         "gtag":"https://www.googletagmanager.com/gtag/js?id=G-JZXEWLBT33",
         "gtag_id" :"G-JZXEWLBT33"  
       }
@@ -49,9 +49,9 @@
     "first_header_title":"Featured Districts",
     "viewData" : [
        
-      {"lokal":"Bongabong, Oriental Mindoro",             "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
-      {"lokal":"Cagayan East",                           "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
-        {"lokal":"Davao City",                           "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Zambales North",             "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Bulacan South",                           "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+        {"lokal":"Gingoog City, Misamis Oriental",                           "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
       
       {"lokal":"",         "divider":false , "divider_title":"Special", "color":"#42d4f5" , "bg":"#232129"},
         
